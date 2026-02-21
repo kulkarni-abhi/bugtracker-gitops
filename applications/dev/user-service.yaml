@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: user-service-dev
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://github.com/kulkarni-abhi/bugtracker-user-service
+      targetRevision: dev
+      path: helm
+      helm:
+        valueFiles:
+          - $values/environments/dev/user-service-values.yaml
+
+    - repoURL: https://github.com/kulkarni-abhi/bugtracker-gitops
+      targetRevision: main
+      ref: values
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
