@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project-service-qe
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+    - repoURL: https://github.com/kulkarni-abhi/bugtracker-project-service
+      targetRevision: dev
+      path: helm
+      helm:
+        valueFiles:
+          - $values/environments/qe/project-service-values.yaml
+
+    - repoURL: https://github.com/kulkarni-abhi/bugtracker-gitops
+      targetRevision: main
+      ref: values
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: qe
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
