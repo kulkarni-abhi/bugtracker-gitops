@@ -1,8 +1,8 @@
-replicaCount: 1
+replicaCount: 2
 
 image:
   repository: ghcr.io/kulkarni-abhi/bugtracker-api-gateway
-  tag: "CHANGE_ME"
+  tag: "dev-92ee7b8604e7b26ce65d8685c68f836c3575b532"
   pullPolicy: Always
 
 service:
@@ -13,8 +13,8 @@ containerPort: 8080
 
 resources:
   requests:
-    cpu: 100m
-    memory: 128Mi
-  limits:
     cpu: 200m
     memory: 256Mi
+  limits:
+    cpu: 200m
+    memory: 512Mi

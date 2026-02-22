@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/kulkarni-abhi/bugtracker-comment-service
-  tag: "CHANGE_ME"
+  tag: "dev-62d04dd7c65df9d7d9ccfdcd9bcd3749ec87d650"
   pullPolicy: Always
 
 service:
@@ -13,8 +13,8 @@ containerPort: 8080
 
 resources:
   requests:
-    cpu: 100m
-    memory: 128Mi
-  limits:
     cpu: 200m
     memory: 256Mi
+  limits:
+    cpu: 200m
+    memory: 512Mi
