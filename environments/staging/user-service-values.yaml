@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/kulkarni-abhi/bugtracker-user-service
-  tag: "CHANGE_ME"
+  tag: "release-5e43a129d64b534f963e5f0e3a57c505b06e689e"
   pullPolicy: Always
 
 service:
