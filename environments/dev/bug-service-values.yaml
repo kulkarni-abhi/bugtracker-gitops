@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/kulkarni-abhi/bugtracker-bug-service
-  tag: "dev-98625d1eed1a1f303fd8f36731a5fc67a2c8bdc8"
+  tag: "dev-414a1fb07e4de690ce1d02c5a219ed2fbf10b0d7"
   pullPolicy: Always
 
 service:
