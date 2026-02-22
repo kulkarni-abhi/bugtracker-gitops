@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: ghcr.io/kulkarni-abhi/bugtracker-api-gateway
-  tag: "CHANGE_ME"
+  tag: "release-68763bdc7eefecd352716df9aab5868634d335cc"
   pullPolicy: Always
 
 service:
