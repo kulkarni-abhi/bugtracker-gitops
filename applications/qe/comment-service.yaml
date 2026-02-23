@@ -7,9 +7,9 @@ spec:
   project: default
 
   sources:
-    - repoURL: https://github.com/kulkarni-abhi/bugtracker-comment-service
-      targetRevision: dev
-      path: helm
+    - repoURL: oci://ghcr.io/kulkarni-abhi/helm
+      chart: bugtracker-comment-service
+      targetRevision: 0.2.0
       helm:
         valueFiles:
           - $values/environments/qe/comment-service-values.yaml
