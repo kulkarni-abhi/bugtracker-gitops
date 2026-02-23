@@ -7,9 +7,9 @@ spec:
   project: default
 
   sources:
-    - repoURL: https://github.com/kulkarni-abhi/bugtracker-user-service
-      targetRevision: dev
-      path: helm
+    - repoURL: oci://ghcr.io/kulkarni-abhi/helm
+      chart: bugtracker-user-service
+      targetRevision: 0.2.0
       helm:
         valueFiles:
           - $values/environments/prod/user-service-values.yaml
